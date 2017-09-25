@@ -257,10 +257,13 @@ function Lantern()
 
 function flicker()
 {
-	if(p<10)
-		p+=0.5;
+	if(p<5)
+		p+=0.06;
 	for(var i=0;i<=5;i++)
 	{
-		lightUp[i] = int(random(p));
+		if(p<5)
+			lightUp[i] = int(random(p));
+		else
+	  	lightUp[i] = 1;
 	}
 }
